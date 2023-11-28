@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Legends Randomizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Apex Legends Randomizer</h1>
+
+    <p>Click the button below to randomize a legend:</p>
+
+    <button onclick="randomizeLegend()">Randomize Legend</button>
+
+    <p id="legendResult"></p>
+
+    <script>
+        // List of Apex Legends
+        const legends = [
+            'Bloodhound', 'Gibraltar', 'Lifeline', 'Pathfinder', 'Wraith', 'Bangalore',
+            'Caustic', 'Mirage', 'Octane', 'Wattson', 'Crypto', 'Revenant', 'Loba',
+            'Rampart', 'Horizon', 'Fuse', 'Valkyrie', 'Seer', 'Ash', 'Mad Maggie', 'Balistic', 'Vantage', 'Conduit', 'New Castle','Catalyst' 
+        ];
+
+        function randomizeLegend() {
+            // Get a random index from the legends array
+            const randomIndex = Math.floor(Math.random() * legends.length);
+
+            // Get the legend at the random index
+            const randomLegend = legends[randomIndex];
+
+            // Display the result
+            document.getElementById('legendResult').innerText = `You got: ${randomLegend}`;
+        }
+    </script>
+
+</body>
+</html>
